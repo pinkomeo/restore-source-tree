@@ -56,7 +56,8 @@ const trimFooter = (str) => {
 };
 
 const saveSourceContent = (smc, filePath, src) => {
-  const content = trimFooter(smc.sourceContentFor(src));
+//   const content = trimFooter(smc.sourceContentFor(src));
+  const content = smc.sourceContentFor(src);
   const outPath = path.join(program.outDir, filePath);
   const dir = path.dirname(outPath);
 
